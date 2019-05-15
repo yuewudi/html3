@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!--1. 文档说明
+2. 树文档
+3. 开始标签 结束标签 双标签 -> 写内容
+4. 单标签   开始标签 &ndash;&gt;  没有必要写东西
+5. 属性 对于标签的功能的补充说明
+
+6. head 是对文档中心思想的说明
+7. 呈现方式 矩形
+8. 排列方式：块元素：不能和别的元素共享一行 ,能设置宽高   div  默认的高是文字的高度 宽是浏览器的宽度
+             行内元素：能和别人在用一行显示，不能设置宽高  所有修饰文字的标签。
+             行内块元素:
+9. css的选择器 优先级：哪种选择器指的更具体，优先级就比较高
+    id 类  标签
+    复合 同向比较要比相同的选择器的优先级要高
+    伪类选择器 one:hover{}
+10. 继承 所有关于文字修饰的属性都能继承但是优先级最低
+
+-->
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UBDF</title>
+    <style>
+       /* div {
+            width: 96px;
+            height: 48px;
+            border: 2px solid #000;
+            border-bottom: 50px solid #000;
+            border-radius: 50%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            margin: auto;
+            transition: all 2s ease;
+        }
+
+        div:before {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border: 20px solid #fff;
+            background: #000;
+            border-radius: 50%;
+            right: 0;
+            top: 50%;
+        }
+
+        div:after {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border: 20px solid #000;
+            background: #fff;
+            border-radius: 50%;
+            left: 0;
+            top: 50%;
+
+        }*/
+
+
+        div {
+            width: 200px;
+            height :200px;
+            border: 1px solid red;
+        }
+        span{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+    </style>
+   <!-- <script>
+
+        window.onload = function (ev) {
+            var div = document.querySelector("div")
+            div.onmouseover = function (ev2) {
+                div.style.transform = "rotate(180deg)"
+            }
+        }
+    </script>-->
+
+
+</head>
+<body>
+
+<!--文字 图片 视频 音频-->
+<div>1</div>
+<div>2</div>
+<span>a</span>
+<span>b</span>
+<!-- seo 搜索引擎优化-->
+<strong>粗体</strong>
+<b>粗体</b>
+<em>斜体</em>
+<i>斜体</i>
+<del>删除线</del>
+<s>删除线</s>
+<a href="">连接</a>
+<span>典型的行内元素</span>
+
+<img src="imgs/1.jpg" alt="" width="100px">
+<img src="imgs/1.jpg" alt="" width="100px">
+<!--<a href="http://baidu.com">百度</a>
+<img src="./1.jpg" alt="图片不存在" title="这时一张图片" width="100">
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+
+<ol>
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+    <li>d</li>
+</ol>
+
+
+<table>
+    <tr>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>班级</th>
+        <th>年龄</th>
+    </tr>
+    <tr>
+        <td>张三</td>
+        <td>男</td>
+        <td>大数据</td>
+        <td>22</td>
+    </tr>
+    <tr>
+        <td>张三</td>
+        <td>男</td>
+        <td>大数据</td>
+        <td>22</td>
+    </tr>
+    <tr>
+        <td>张三</td>
+        <td>男</td>
+        <td>大数据</td>
+        <td>22</td>
+    </tr>
+</table>-->
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动</title>
+    <style>
+
+        /*
+        一个元素浮动后，层级提高了
+        1. 如果说元素浮动之后，并且父元素没有指定高度，那么父元素会撑不开的
+        就会导致后面的元素出现排列错误
+            a. 给父元素设置高度
+            b. 清除浮动带来的问题
+            c. 可以给父元素设置一个属性 overflow:hidden
+                overflow：对于超出的内容做处理 visible 可见 hidden 不可见 scroll 滚动条 auto 自动
+        2.默认浮动 第一个靠父元素左上角，之后的都靠前一个左上角，如果父元素的宽度不足以放下剩余的自动换行
+        3.在使用浮动的时候我们要保证同一行浮动的元素的高度要统一 ，否则会出现排列错误的情况
+         */
+        .box{
+            border: 1px solid red;
+            overflow: hidden;
+
+        }
+        .box .inner:nth-child(1){
+            width: 200px;
+            height: 200px;
+            border: 1px solid blue;
+            float: left;
+        }
+        .box .inner:nth-child(2){
+            width: 100px;
+            height: 100px;
+            border: 1px solid blue;
+            float: left;
+        }
+        .box .inner:nth-child(3){
+            width: 300px;
+            height: 300px;
+            border: 1px solid salmon;
+            float: left;
+        }
+        .box inner:nth-child(4){
+            width: 300px;
+            height: 200px;
+            border: 1px solid orangered;
+            float: left;
+        }
+        span{
+
+        }
+    </style>
+</head>
+<body>
+<!--    为了让某一个元素和其他元素共享一行，并且可以设置宽高，并且可以忽略空格 从而达到布局的目的-->
+<div class="box">
+    <div class="inner">
+1
+    </div>
+    <div class="inner">
+2
+    </div>
+    <div class="inner">
+3
+    </div>
+    <div class="inner">
+4
+    </div>
+
+</div>
+<div>
+    123
+</div>
+</body>
+</html>

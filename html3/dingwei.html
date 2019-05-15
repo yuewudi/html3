@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位</title>
+    <style>
+        /*
+        4种定位：静态定位 默认的定位方式
+                 绝对定位 position: absolute  就是相对于原点进行位置的设定，但是这个原点，具有定位属性的前辈元素
+                    如果前辈元素没有定位属性，则直接相对于浏览器的左上角
+                    a.需要配合使用left top 的值 否则会呆在原地不动
+                    b.层级的问题 有定位属性的才有x-index
+                 相对定位 relative  就是相对于自己的位置来进行定位，但是自己原来的位置并不会消失
+                    意义：就是给绝对定位的元素提供原定，又不会影响其他元素的排列
+                 固定定位 fixed 参照浏览器的左上角
+
+         */
+        .out{
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            position: absolute;
+            left: 100px;
+            top: 100px;
+        }
+        .inner{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            position: absolute;
+            left: 0;top: 0;/* 谁的左上角 具有定位属性的前辈元素 如果前辈元素没有定位属性，
+            则直接相对于浏览器的左上角*/
+        }
+    </style>
+</head>
+<body>
+<div class="out">
+<div class="inner">1</div>
+<div class="inner">2</div>
+<div class="inner">3</div>
+<div class="inner">4</div>
+</div>
+</body>
+</html>
